@@ -19,14 +19,14 @@
             <uniqueVersion>false</uniqueVersion>
             <id>TestWebApp_Repository</id>
             <name>TestWebApp Applications Repository Internal</name>
-            <url>file:///home/diego/.m2/repository</url>
+            <url>file:////home/diego/.m2/repository/com/mycompany</url>
             <layout>default</layout>
         </repository>
         <snapshotRepository>
             <uniqueVersion>false</uniqueVersion>
             <id>TestWebApp_Repository</id>
             <name>TestWebApp Applications Repository Internal</name>
-            <url>file:///home/diego/.m2/repository</url>
+            <url>file:////home/diego/.m2/repository/com/mycompany</url>
             <layout>default</layout>
         </snapshotRepository>
     </distributionManagement>
@@ -35,8 +35,8 @@
         <repository>
             
             <id>releases</id>
-            <name>Releases</name>
-            <url>http://127.0.0.1:8081/#admin/</url>
+            <name>maven-releases</name>
+            <url>http://127.0.0.1:8081/repository/maven-releases/</url>
             
         </repository>
         <snapshotRepository>
