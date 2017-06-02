@@ -20,13 +20,13 @@
                      <repository>
                        <id>releases</id>
                        <name>releases</name>
-                       <url>http://127.0.0.1:8081/#admin/repository/repositories:maven-releases</url>
+                       <url>http://127.0.0.1:8081/content/repositories/maven-releases</url>
                      </repository>
 
                      <snapshotRepository>
                        <id>snapshots</id>
                        <name>Internal Snapshots</name>
-                       <url>http://127.0.0.1:8081/#admin/repository/repositories:maven-snapshots</url>
+                       <url>http://127.0.0.1:8081/content/repositories/maven-snapshots</url>
                      </snapshotRepository>
 </distributionManagement>
     
