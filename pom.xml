@@ -20,13 +20,13 @@
                      <repository>
                        <id>releases</id>
                        <name>releases</name>
-                       <url>http://127.0.0.1:8081/content/repositories/releases/</url>
+                       <url>http://127.0.0.1:8081/#browse/browse/components:maven-releases/</url>
                      </repository>
 
                      <snapshotRepository>
                        <id>snapshots</id>
                        <name>Internal Snapshots</name>
-                       <url>http://127.0.0.1:8081/content/repositories/snapshots/</url>
+                       <url>http://127.0.0.1:8081/#browse/browse/components:maven-snapshots/</url>
                      </snapshotRepository>
 </distributionManagement>
     
@@ -91,6 +91,27 @@
                     </execution>
                 </executions>
             </plugin>
+            
+            <plugin>
+   <groupId>org.sonatype.plugins</groupId>
+   <artifactId>nexus-staging-maven-plugin</artifactId>
+   <version>1.5.1</version>
+   <executions>
+      <execution>
+         <id>default-deploy</id>
+         <phase>deploy</phase>
+         <goals>
+            <goal>deploy</goal>
+         </goals>
+      </execution>
+   </executions>
+   <configuration>
+      <serverId>nexus</serverId>
+      <nexusUrl>http://localhost:8081/nexus/</nexusUrl>
+      <skipStaging>true</skipStaging>
+   </configuration>
+</plugin>
+            
             <plugin> 
                 <groupId>org.wildfly.plugins</groupId> 
                 <artifactId>wildfly-maven-plugin</artifactId> 
