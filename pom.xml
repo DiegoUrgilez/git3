@@ -15,19 +15,26 @@
     </properties>
     
    
-    <distributionManagement>
-
-                     <repository>
-                       <id>maven-releases</id>
-                       <url>http://127.0.0.1:8081/repository/maven-releases/</url>
-                     </repository>
-
-                     <snapshotRepository>
-                       <id>snapshots</id>
-                       <name>Internal Snapshots</name>
-                       <url>http://localhost:8081/repository/maven-snapshots/</url>
-                     </snapshotRepository>
-</distributionManagement>
+    <repositories>
+    <repository>
+      <releases>
+        <enabled>false</enabled>
+        <updatePolicy>always</updatePolicy>
+        <checksumPolicy>warn</checksumPolicy>
+      </releases>
+      <snapshots>
+        <enabled>true</enabled>
+        <updatePolicy>never</updatePolicy>
+        <checksumPolicy>fail</checksumPolicy>
+      </snapshots>
+      <id>codehausSnapshots</id>
+      <name>Codehaus Snapshots</name>
+      <url>http://snapshots.maven.codehaus.org/maven2</url>
+      <layout>default</layout>
+    </repository>
+  </repositories>
+    
+    
     
     <dependencies>
         <dependency>
