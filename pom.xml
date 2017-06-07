@@ -18,7 +18,7 @@
 <repository>
 <id>deploymentRepo</id>
 <name>My Nexus repository</name>
-<url>http://localhost:8081/nexus/content/groups/public</url>
+<url>http://127.0.0.1:8081/nexus/content/groups/public</url>
 <releases>
 <enabled>true</enabled>
 </releases>
@@ -33,13 +33,13 @@
 <repository>
 <id>deploymentRepo</id>
 <name>My Nexus repository</name>
-<url>http://localhost:8081/nexus/content/repositories/releases</url>
+<url>http://127.0.0.1:8081/nexus/content/repositories/releases</url>
 </repository>
 <!-- Publish snapshots here -->
 <snapshotRepository>
 <id>deploymentRepo</id>
 <name>My Nexus repository</name>
-<url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+<url>http://127.0.0.1:8081/nexus/content/repositories/snapshots</url>
 </snapshotRepository>
 </distributionManagement>
       
