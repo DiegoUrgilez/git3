@@ -14,24 +14,35 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
     
-         
-    <distributionManagement>
-        
-        <repository>
-                        <id>deploymentRepoReleases</id>
-                        <name>Releases (Nexus)</name>
-                        <url>http://localhost:8081/nexus/content/repositories/releases</url>
-                       </repository>
-                       <repository>
-                         <id>deploymentRepoSnapshots</id>
-                         <name>Snapshots (Nexus)</name>
-                        <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-                     </repository>
-       
-                   
+    <repositories>
+<repository>
+<id>deploymentRepo</id>
+<name>My Nexus repository</name>
+<url>http://localhost:8080/nexus/content/groups/public</url>
+<releases>
+<enabled>true</enabled>
+</releases>
+<snapshots>
+<enabled>true</enabled>
+</snapshots>
+</repository>
+</repositories>
+    
+      <distributionManagement>
+<!-- Publish releases here -->
+<repository>
+<id>deploymentRepo</id>
+<name>My Nexus repository</name>
+<url>http://localhost:8080/nexus/content/repositories/releases</url>
+</repository>
+<!-- Publish snapshots here -->
+<snapshotRepository>
+<id>deploymentRepo</id>
+<name>My Nexus repository</name>
+<url>http://localhost:8080/nexus/content/repositories/snapshots</url>
+</snapshotRepository>
 </distributionManagement>
-    
-    
+      
     
     <dependencies>
         <dependency>
