@@ -22,11 +22,7 @@
                         <name>Internal Releases</name>
                         <url>http://127.0.0.1:8081/nexus/content/repositories/releases</url>
                       </repository>
-       
-                   
-</distributionManagement>
-    
-    <repository>
+        <repository>
                         <id>deploymentRepoReleases</id>
                         <name>Releases (Nexus)</name>
                         <url>http://localhost:8081/nexus/content/repositories/releases</url>
@@ -36,6 +32,11 @@
                          <name>Snapshots (Nexus)</name>
                         <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
                      </repository>
+       
+                   
+</distributionManagement>
+    
+    
     
     <dependencies>
         <dependency>
