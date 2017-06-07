@@ -23,17 +23,7 @@
                         <url>http://127.0.0.1:8081/nexus/content/repositories/releases</url>
                       </repository>
        
-                      <repository>
-                        <id>deploymentRepoReleases</id>
-                        <name>Releases (Nexus)</name>
-                        <url>http://localhost:8081/nexus/content/repositories/releases</url>
-                       </repository>
-                       <repository>
-                         <id>deploymentRepoSnapshots</id>
-                         <name>Snapshots (Nexus)</name>
-                        <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
-                     </repository>
-
+                      
                      <repository>
                        <id>maven-releases</id>
                        <url>file:///home/diego/.m2/repository</url>
@@ -45,6 +35,17 @@
                        <url>file:///home/diego/.m2/repository</url>
                      </snapshotRepository>
 </distributionManagement>
+    
+    <repository>
+                        <id>deploymentRepoReleases</id>
+                        <name>Releases (Nexus)</name>
+                        <url>http://localhost:8081/nexus/content/repositories/releases</url>
+                       </repository>
+                       <repository>
+                         <id>deploymentRepoSnapshots</id>
+                         <name>Snapshots (Nexus)</name>
+                        <url>http://localhost:8081/nexus/content/repositories/snapshots</url>
+                     </repository>
     
     <dependencies>
         <dependency>
